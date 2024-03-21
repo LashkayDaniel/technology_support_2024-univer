@@ -1,0 +1,8 @@
+name: Linter
+on: [pull_request, push]
+jobs:
+  lint-checker:
+    runs-on: windows-latest
+    steps:
+      - name: Run linter
+        run: npm run lint

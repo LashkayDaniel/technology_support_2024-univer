@@ -4,5 +4,13 @@ jobs:
   lint-checker:
     runs-on: windows-latest
     steps:
-      - name: Run linter
-        run: npm run lint
+    - name: Setup Node.js
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 14
+    
+    - name: Install dependencies
+      run: npm i
+    
+    - name: Run linter
+      run: npm run lint

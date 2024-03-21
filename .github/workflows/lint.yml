@@ -1,5 +1,9 @@
 name: Linter
-on: [pull_request, push]
+on: 
+  pull_request: 
+  push:
+    branches:
+        - 'laboratorna_3_hook_lashkay'
 jobs:
   lint-checker:
     runs-on: windows-latest

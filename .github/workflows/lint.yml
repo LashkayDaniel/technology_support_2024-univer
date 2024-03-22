@@ -1,9 +1,5 @@
 name: Linter
-on: 
-  pull_request: 
-  push:
-    branches:
-        - 'laboratorna_3_hook_lashkay'
+on: [pull_request, push]
 jobs:
   lint-checker:
     runs-on: windows-latest
@@ -12,7 +8,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 14.17.0
+          node-version: '20.x'
     
       - name: Install dependencies
         run: npm i

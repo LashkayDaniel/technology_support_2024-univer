@@ -1,0 +1,20 @@
+name: Linter checker
+on:
+  push:
+    branches:
+      - modul_1_lashkay
+jobs:
+  lint-checker:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Run linter
+        run: npm run lint
